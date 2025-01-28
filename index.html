@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Anaïs Kadic</title>
+
+        <style> 
+            body {
+                background-color: rgb(210, 237, 246); 
+                margin: 0; 
+                font-family: Arial, sans-serif; 
+            }
+
+            .h1 {
+                text-align: center;
+            }
+
+            .titre {
+                width: 100px;
+                font-weight: bold;
+            }
+
+            nav {
+                background-color: #e6f4f9;
+                color: rgb(44, 42, 42);
+                padding: 10px;
+            }
+
+            img {
+                width: 200px; 
+                height: 200px; 
+                object-fit: cover; 
+            }
+
+            .hidden {
+                display: none;
+            }
+        </style>
+    </head>
+
+    <body>
+        <nav>
+            <ul>
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#services">Option</a></li>
+            </ul>
+        </nav>
+
+        <section id="home">
+            <h1>En vente</h1>
+            <p>Voici la première page web de revente de vêtements</p>
+            <button onclick="togglePantalons()">Les Pantalons</button>
+            <button onclick = "togglepulls()">Les pulls</button>
+            <div id="pantalons" class="hidden">
+                <p class="titre">Voici les pantalons :</p>
+                <img src="pantalon.jpeg" alt="Pantalon">
+                <img src="pantalon2.jpg" alt="Pantalon">
+            </div>
+
+            <div id="pulls" class="hidden">
+                <p class="titre">Voici les pantalons :</p>
+                <img src="pantalon.jpeg" alt="Pantalon">
+                <img src="pantalon2.jpg" alt="Pantalon">
+            </div>
+
+
+        </section>
+
+        <script>
+            function togglePantalons() {
+                const pantalonsDiv = document.getElementById('pantalons');
+                if (pantalonsDiv.classList.contains('hidden')) {
+                    pantalonsDiv.classList.remove('hidden');
+                } else {
+                    pantalonsDiv.classList.add('hidden');
+                }
+            }
+            function togglepulls() {
+                const pantalonsDiv = document.getElementById('pulls');
+                if (pantalonsDiv.classList.contains('hidden')) {
+                    pantalonsDiv.classList.remove('hidden');
+                } else {
+                    pantalonsDiv.classList.add('hidden');
+                }
+            }
+        </script>
+    </body>
+</html>
